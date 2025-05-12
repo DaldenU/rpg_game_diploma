@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcnvlpbtlw3u"]
+
+[ext_resource type="Script" uid="uid://ffg7skgo3e6n" path="res://scripts/dialogue_manager.gd" id="1_4y3eu"]
+
+[node name="DialogueBox" type="CanvasLayer" groups=["DialogueManager"]]
+script = ExtResource("1_4y3eu")
+
+[node name="DialogueBox" type="Panel" parent="."]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -343.0
+offset_top = -191.0
+offset_right = 357.0
+offset_bottom = -11.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="DialogueBox"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 10.0
+offset_right = 60.0
+offset_bottom = 33.0
+text = "Character Name"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="DialogueBox"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 43.0
+offset_right = 660.0
+offset_bottom = 132.0
+text = "Dummy Text"
+
+[node name="NextIndicator" type="Label" parent="DialogueBox"]
+layout_mode = 0
+offset_left = 662.0
+offset_top = 148.0
+offset_right = 685.0
+offset_bottom = 171.0
+text = "▼"

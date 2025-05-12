@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=3 uid="uid://cko5gqc6x1s5e"]
+
+[ext_resource type="Script" uid="uid://gk16l4268m6y" path="res://scripts/MainMenu.gd" id="1_vjtqc"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_vjtqc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 900.0
+offset_top = 600.0
+offset_right = 1000.0
+offset_bottom = 736.0
+alignment = 1
+
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Start"
+
+[node name="LoadButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Load"
+
+[node name="SettingsButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Settings"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[node name="TitleText" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 706.0
+offset_top = 389.0
+offset_right = 1206.0
+offset_bottom = 589.0
+theme_override_font_sizes/bold_italics_font_size = 20
+theme_override_font_sizes/italics_font_size = 0
+theme_override_font_sizes/mono_font_size = 0
+theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/bold_font_size = 0
+text = "Tales Of
+Mirn"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=3 uid="uid://dktxy7dkfbgud"]
+
+[ext_resource type="Script" uid="uid://ccpu1mybqcoin" path="res://scripts/Player.gd" id="1_7hr6d"]
+[ext_resource type="Texture2D" uid="uid://d2ysrmoodxrhl" path="res://icon.svg" id="2_p5lwv"]
+[ext_resource type="Script" uid="uid://cxw4162mtl7xc" path="res://scenes/maps/npc.gd" id="3_kerwl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kerwl"]
+size = Vector2(127, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_avjss"]
+size = Vector2(56, 244)
+
+[node name="Village" type="Node2D"]
+
+[node name="Player" type="CharacterBody2D" parent="." groups=["Player"]]
+position = Vector2(925, 439)
+script = ExtResource("1_7hr6d")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+texture = ExtResource("2_p5lwv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(-0.5, -1)
+shape = SubResource("RectangleShape2D_kerwl")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(1319, 1556)
+rotation = 2.02548
+scale = Vector2(0.269312, -12.8561)
+texture = ExtResource("2_p5lwv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(582, 250)
+scale = Vector2(0.269312, -12.8561)
+texture = ExtResource("2_p5lwv")
+
+[node name="NPC" type="CharacterBody2D" parent="."]
+position = Vector2(169, 90)
+scale = Vector2(0.795344, 0.816368)
+script = ExtResource("3_kerwl")
+npc_name = "Drago Hui"
+interaction_distance = 500.0
+
+[node name="Sprite2D" type="Sprite2D" parent="NPC"]
+position = Vector2(200, 217)
+scale = Vector2(0.449133, 1.93441)
+texture = ExtResource("2_p5lwv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC"]
+position = Vector2(201, 217)
+shape = SubResource("RectangleShape2D_avjss")
