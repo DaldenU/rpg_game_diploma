@@ -1,0 +1,110 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3myxvcwqkw4w"]
+
+[ext_resource type="Script" uid="uid://q43frdjx4p0f" path="res://scripts/stats_menu_script.gd" id="1_gq0qo"]
+
+[node name="StatsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gq0qo")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1067.0
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Character Stats"
+
+[node name="Button" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "X"
+
+[node name="TabContainer" type="TabContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+current_tab = 0
+
+[node name="StatsTab" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="LevelLabel" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/StatsTab"]
+layout_mode = 2
+
+[node name="XPLabel" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/StatsTab"]
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/StatsTab"]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/StatsTab"]
+layout_mode = 2
+
+[node name="StrengthLabel" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/StatsTab/GridContainer"]
+layout_mode = 2
+text = "Strength"
+
+[node name="StrengthHBox" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/StatsTab/GridContainer"]
+layout_mode = 2
+
+[node name="StrengthValueLabel" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/StatsTab/GridContainer/StrengthHBox"]
+layout_mode = 2
+
+[node name="StrengthButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/StatsTab/GridContainer/StrengthHBox"]
+layout_mode = 2
+text = "+"
+
+[node name="DefenseLabel" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/StatsTab/GridContainer"]
+layout_mode = 2
+text = "Defense"
+
+[node name="DefenseHBox" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/StatsTab/GridContainer"]
+layout_mode = 2
+
+[node name="DefenseValueLabel" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/StatsTab/GridContainer/DefenseHBox"]
+layout_mode = 2
+
+[node name="DefenseButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/StatsTab/GridContainer/DefenseHBox"]
+layout_mode = 2
+text = "+"
+
+[node name="IntelligenceLabel" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/StatsTab/GridContainer"]
+layout_mode = 2
+text = "Intelligence"
+
+[node name="IntelligenceHBox" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/StatsTab/GridContainer"]
+layout_mode = 2
+
+[node name="IntelligenceValueLabel" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/StatsTab/GridContainer/IntelligenceHBox"]
+layout_mode = 2
+
+[node name="IntelligenceButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/StatsTab/GridContainer/IntelligenceHBox"]
+layout_mode = 2
+text = "+"
+
+[node name="PointsAvailableLabel" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/StatsTab/GridContainer"]
+layout_mode = 2
+
+[node name="InventoryTab" type="Control" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="InventoryGrid" type="GridContainer" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/InventoryTab"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+columns = 5
